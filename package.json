@@ -1,0 +1,26 @@
+{
+  "name": "eventbrite-doorprize",
+  "version": "1.0.0",
+  "description": "doorprizes for checked in attendees at an eventbrite event",
+  "main": "app.js",
+  "dependencies": {
+    "monument": "^1.3.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+  	"start": "node app.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "MIT",
+  "engines": {
+    "node": "*",
+    "iojs": "1.0.x"
+  },
+  "config": {
+    "oauth-token": "DK5Q57S5VRKOS2B33EIV"
+    , "anon-token": "5O3ULBW7F4SDKRKD7K2Y"
+    , "secret": "Q55CO2OOAIMR7NMNCYNU3YLL5ZTZ6654FQAW22IDGVLEQMFD2R"
+    , "key": "4VVKGCT254SLDVAKKA"
+  }
+}
