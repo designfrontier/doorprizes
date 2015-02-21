@@ -45,10 +45,13 @@ var cache = {}
 
     , clearCache = function (pruneThreshold) {
         'use strict';
+        var now = new Date().getTime();
 
         if(typeof pruneThreshold !== 'undefined'){
             Object.keys(cache).forEach(function(item){
-                if(cache[item].uses <= pruneThreshold && cache[item].expires !== Infinity){
+                 if(pruneThreshold === 0 && cache[item].expires.getTime() <= now){
+                    delete cache[item];
+                } else if(pruneThreshold > 0 && cache[item].uses <= pruneThreshold && cache[item].expires !== Infinity){
                     delete cache[item];
                 }
             });

@@ -6,7 +6,13 @@ var events = require('monument').events
 		'use strict';
 
 		events.emit('data:set:attendees:' + eventid, checkedIn);
-		cache.add('attendees:' + eventid, checkedIn);
+		cache.add('attendees:' + eventid, checkedIn, 7200000);
+	}
+
+	, attendeeError = function (eventid) {
+		'use strict';
+
+		events.emit('data:set:attendees:' + eventid, 'error');
 	};
 
 events.on('data:get:attendees', function (eventObj) {
@@ -24,8 +30,7 @@ events.on('data:get:attendees', function (eventObj) {
 				, checkedIn;
 
 			if(error) {
-				console.log('data:set:attendees:' + eventObj.eventid);
-				events.emit('data:set:attendees:' + eventObj.eventid, 'error');
+				attendeeError(eventObj.eventid);
 			} else {
 				checkedIn = data.attendees;
 
@@ -48,4 +53,6 @@ events.on('data:get:attendees', function (eventObj) {
 			}
 		});
 	}
+
+	cache.prune(0);
 });

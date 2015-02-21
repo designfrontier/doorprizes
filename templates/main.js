@@ -1,6 +1,6 @@
 (function(){function main(it
 /**/) {
-var out='<h1>Welcome to monument</h1><p>"It never gets easier, you just go faster" - Greg Lemond</p><p> You are on version '+( it.version )+' of your project</p>';return out;
+var out='<!doctype html><html><head><title</head><body><h1>Eventbrite Doorprize Picker!</h1><p>We need a couple of things from you to get started. Your oauth token and the eventid (you need to be the owner of the event) and then we will generate random people for you!</p><form><label>oauth token: <input id="token" type="text" name="token"></label><label>eventid: <input id="event" type="text" name="event"></label><button type="submit" id="submit"> Get some randoms!</button></form><script src="/dist/main.js"></script></body></html>';return out;
 }var itself=main, _encodeHTML=(function (doNotSkipEncoded) {
 		var encodeHTMLRules = { "&": "&#38;", "<": "&#60;", ">": "&#62;", '"': "&#34;", "'": "&#39;", "/": "&#47;" },
 			matchHTML = doNotSkipEncoded ? /[&<>"'\/]/g : /&(?!#?\w+;)|<|>|"|'|\//g;

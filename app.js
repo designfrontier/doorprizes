@@ -7,4 +7,5 @@ monument.server({
 				, templatePath: './templates'
 				, publicPath: './public'
 				, port: process.env.PORT || 3000
+				, compress: false
 			});

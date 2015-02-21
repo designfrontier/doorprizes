@@ -1,5 +1,4 @@
 var events = require('monument').events
-	, pkg = require('../package.json')
 	, getRandomInt = function (min, max) {
 		'use strict';
 
@@ -8,14 +7,14 @@ var events = require('monument').events
 	, template = require('../templates/random');
 
 
-events.on('route:/random/:eventid:get', function (connection) {
+events.on('route:/random/:eventid/:tokenid:get', function (connection) {
 	'use strict';
 
 	var filteredAttendees = []
 		, randomAttendee;
 
 	events.once('data:set:attendees:' + connection.params.eventid, function (attendees) {
-		if(typeof attendees === 'string' && attendees === 'false'){
+		if(typeof attendees !== 'object' || !Array.isArray(attendees)){
 			events.emit('error:500', {connection: connection, message: 'There was a problem with eventbrite'});
 		} else {
 			filteredAttendees = attendees.filter(function (attendee) {
@@ -29,5 +28,5 @@ events.on('route:/random/:eventid:get', function (connection) {
 
 	});
 
-	events.emit('data:get:attendees', {eventid: connection.params.eventid, token: pkg.config['oauth-token']});
+	events.emit('data:get:attendees', {eventid: connection.params.eventid, token: connection.params.tokenid});
 });
