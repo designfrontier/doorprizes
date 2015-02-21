@@ -1,10 +1,8 @@
 var events = require('monument').events
-	, mainTemplate = require('../templates/main')
-	
-	, pkg = require('../package.json');
+	, mainTemplate = require('../templates/main');
 
 events.on('route:/:get', function (connection) {
 	'use strict';
-	
-	connection.res.end(mainTemplate({version: pkg.version}));
+
+	connection.res.end(mainTemplate());
 });

@@ -1,4 +1,4 @@
 {
 	"/": ["get"]
-	, "/about": ["get", "put"]
+	, "/random/:eventid/:tokenid": ["get"]
 }
