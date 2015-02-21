@@ -1,6 +1,7 @@
 {
   "name": "eventbrite-doorprize",
   "version": "1.0.0",
-  "dependencies": {}
+  "dependencies": {
+    "normalize.css": "~3.0.2"
+  }
 }
-

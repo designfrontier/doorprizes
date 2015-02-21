@@ -1,32 +1,98 @@
 0 info it worked if it ends with ok
-1 verbose cli [ '/usr/local/bin/node', '/usr/local/bin/npm', 'start' ]
+1 verbose cli [ '/usr/local/bin/node',
+1 verbose cli   '/usr/local/bin/npm',
+1 verbose cli   'install',
+1 verbose cli   '--save-dev',
+1 verbose cli   'lib-sass' ]
 2 info using npm@2.0.0
 3 info using node@v0.11.14
-4 verbose run-script [ 'prestart', 'start', 'poststart' ]
-5 info prestart eventbrite-doorprize@1.0.0
-6 info start eventbrite-doorprize@1.0.0
-7 verbose unsafe-perm in lifecycle true
-8 info eventbrite-doorprize@1.0.0 Failed to exec start script
-9 verbose stack Error: Exit status 1
-9 verbose stack     at ChildProcess.<anonymous> (/usr/local/lib/node_modules/npm/lib/utils/lifecycle.js:212:16)
-9 verbose stack     at ChildProcess.emit (events.js:110:17)
-9 verbose stack     at maybeClose (child_process.js:1000:16)
-9 verbose stack     at Process.ChildProcess._handle.onexit (child_process.js:1072:5)
-10 verbose pkgid eventbrite-doorprize@1.0.0
-11 verbose cwd /Users/designfrontier/projects/eventbrite-doorprize
-12 error Darwin 14.1.0
-13 error argv "/usr/local/bin/node" "/usr/local/bin/npm" "start"
-14 error node v0.11.14
-15 error npm  v2.0.0
-16 error code ELIFECYCLE
-17 error eventbrite-doorprize@1.0.0 start: `node app.js`
-17 error Exit status 1
-18 error Failed at the eventbrite-doorprize@1.0.0 start script.
-18 error This is most likely a problem with the eventbrite-doorprize package,
-18 error not with npm itself.
-18 error Tell the author that this fails on your system:
-18 error     node app.js
-18 error You can get their info via:
-18 error     npm owner ls eventbrite-doorprize
-18 error There is likely additional logging output above.
-19 verbose exit [ 1, true ]
+4 warn package.json eventbrite-doorprize@1.0.0 No repository field.
+5 verbose readDependencies using package.json deps
+6 verbose cache add [ 'lib-sass', null ]
+7 verbose cache add spec="lib-sass" args=["lib-sass",null]
+8 verbose parsed spec { raw: 'lib-sass',
+8 verbose parsed spec   scope: null,
+8 verbose parsed spec   name: 'lib-sass',
+8 verbose parsed spec   rawSpec: '',
+8 verbose parsed spec   spec: '*',
+8 verbose parsed spec   type: 'range' }
+9 verbose parsed spec { raw: 'lib-sass',
+9 verbose parsed spec   scope: null,
+9 verbose parsed spec   name: 'lib-sass',
+9 verbose parsed spec   rawSpec: '',
+9 verbose parsed spec   spec: '*',
+9 verbose parsed spec   type: 'range' }
+10 verbose addNamed [ 'lib-sass', '*' ]
+11 verbose addNamed [ null, '*' ]
+12 silly lockFile f28b2ef8-lib-sass lib-sass@*
+13 verbose lock lib-sass@* /Users/designfrontier/.npm/f28b2ef8-lib-sass.lock
+14 silly addNameRange { name: 'lib-sass', range: '*', hasData: false }
+15 verbose mapToRegistry name lib-sass
+16 verbose mapToRegistry uri http://registry.npmjs.org/lib-sass
+17 verbose request on initialization, where is /lib-sass
+18 verbose request after pass 1, where is /lib-sass
+19 verbose request url raw /lib-sass
+20 verbose request resolving registry [ 'http://registry.npmjs.org/', './lib-sass' ]
+21 verbose request after pass 2, where is http://registry.npmjs.org/lib-sass
+22 verbose request no auth needed
+23 info attempt registry request try #1 at 15:03:32
+24 verbose request id ab534a0e338b28da
+25 http request GET http://registry.npmjs.org/lib-sass
+26 http 404 http://registry.npmjs.org/lib-sass
+27 verbose headers { server: 'CouchDB/1.5.0 (Erlang OTP/R16B03)',
+27 verbose headers   'content-type': 'application/json',
+27 verbose headers   'cache-control': 'max-age=0',
+27 verbose headers   'content-length': '52',
+27 verbose headers   'accept-ranges': 'bytes',
+27 verbose headers   date: 'Sat, 21 Feb 2015 22:03:33 GMT',
+27 verbose headers   via: '1.1 varnish',
+27 verbose headers   age: '0',
+27 verbose headers   connection: 'close',
+27 verbose headers   'x-served-by': 'cache-dfw1828-DFW',
+27 verbose headers   'x-cache': 'MISS',
+27 verbose headers   'x-cache-hits': '0',
+27 verbose headers   'x-timer': 'S1424556212.992096,VS0,VE189' }
+28 silly registry.get cb [ 404,
+28 silly registry.get   { server: 'CouchDB/1.5.0 (Erlang OTP/R16B03)',
+28 silly registry.get     'content-type': 'application/json',
+28 silly registry.get     'cache-control': 'max-age=0',
+28 silly registry.get     'content-length': '52',
+28 silly registry.get     'accept-ranges': 'bytes',
+28 silly registry.get     date: 'Sat, 21 Feb 2015 22:03:33 GMT',
+28 silly registry.get     via: '1.1 varnish',
+28 silly registry.get     age: '0',
+28 silly registry.get     connection: 'close',
+28 silly registry.get     'x-served-by': 'cache-dfw1828-DFW',
+28 silly registry.get     'x-cache': 'MISS',
+28 silly registry.get     'x-cache-hits': '0',
+28 silly registry.get     'x-timer': 'S1424556212.992096,VS0,VE189' } ]
+29 silly lockFile f28b2ef8-lib-sass lib-sass@*
+30 silly lockFile f28b2ef8-lib-sass lib-sass@*
+31 verbose stack Error: 404 Not Found: lib-sass
+31 verbose stack     at RegClient.<anonymous> (/usr/local/lib/node_modules/npm/node_modules/npm-registry-client/lib/request.js:259:14)
+31 verbose stack     at Request._callback (/usr/local/lib/node_modules/npm/node_modules/npm-registry-client/lib/request.js:198:65)
+31 verbose stack     at Request.self.callback (/usr/local/lib/node_modules/npm/node_modules/request/request.js:236:22)
+31 verbose stack     at Request.emit (events.js:110:17)
+31 verbose stack     at Request.<anonymous> (/usr/local/lib/node_modules/npm/node_modules/request/request.js:1142:14)
+31 verbose stack     at Request.emit (events.js:129:20)
+31 verbose stack     at IncomingMessage.<anonymous> (/usr/local/lib/node_modules/npm/node_modules/request/request.js:1096:12)
+31 verbose stack     at IncomingMessage.emit (events.js:129:20)
+31 verbose stack     at _stream_readable.js:907:16
+31 verbose stack     at process._tickCallback (node.js:372:11)
+32 verbose statusCode 404
+33 verbose pkgid lib-sass
+34 verbose cwd /Users/designfrontier/projects/eventbrite-doorprize
+35 error Darwin 14.1.0
+36 error argv "/usr/local/bin/node" "/usr/local/bin/npm" "install" "--save-dev" "lib-sass"
+37 error node v0.11.14
+38 error npm  v2.0.0
+39 error code E404
+40 error 404 Not Found: lib-sass
+40 error 404
+40 error 404 'lib-sass' is not in the npm registry.
+40 error 404 You should bug the author to publish it (or use the name yourself!)
+40 error 404 It was specified as a dependency of 'eventbrite-doorprize'
+40 error 404
+40 error 404 Note that you can also install from a
+40 error 404 tarball, folder, http url, or git url.
+41 verbose exit [ 1, true ]
