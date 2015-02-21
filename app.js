@@ -1,5 +1,7 @@
 var monument = require('monument');
 
+require('./data/attendees');
+
 monument.server({
 				routePath: './routes'
 				, templatePath: './templates'
