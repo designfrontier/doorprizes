@@ -1,0 +1,44 @@
+@import '../lib/normalize.css/normalize';
+@import './variables';
+
+body {
+	font-family: 'Droid Serif', serif;
+	margin: 0;
+	margin-top: 6rem;
+	padding: $padding--body;
+	max-width: 35rem;
+	color: $text;
+}
+
+.heading {
+	font-size: 3.2em;
+	font-family: 'Oswald', sans-serif;
+	text-transform: uppercase;
+
+	background: $emphasis--background;
+	color: $light--text;
+	padding: $padding--body;
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	margin: 0;
+}
+
+.form {
+	&__item {
+		display: block;
+		margin-top: 1rem;
+		
+		&--button {
+			background: $emphasis--background;
+			color: $light--text;
+			border: none;
+			padding: $padding--body;
+
+			font-weight: bold;
+			box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.3);
+		}
+	}
+
+}
