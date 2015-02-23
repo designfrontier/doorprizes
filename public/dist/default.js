@@ -1,0 +1,1 @@
+!function(e,t){"use strict";t.addEventListener("DOMContentLoaded",function(){var n=t.querySelector("#submit");n.onclick=function(n){var o=t.querySelector("#token").value,r=t.querySelector("#event").value;n.preventDefault(),e.location.pathname="/random/"+r+"/"+o},t.removeEventListener("DOMContentLoaded")})}(window,document);
