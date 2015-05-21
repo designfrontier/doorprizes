@@ -48,6 +48,7 @@ events.on('data:get:attendees', function (eventObj) {
 						});
 					}
 				} else {
+                    console.log(checkedIn);
 					sendData(eventObj.eventid, checkedIn);
 				}
 			}

@@ -4,8 +4,9 @@
   "description": "doorprizes for checked in attendees at an eventbrite event",
   "main": "app.js",
   "dependencies": {
-    "monument": "^1.3.0",
-    "node-eventbrite": "0.0.9"
+    "monument": "^1.5.0",
+    "node-eventbrite": "0.0.9",
+    "random-js": "^1.0.4"
   },
   "devDependencies": {
     "browser-sync": "^2.2.1",
