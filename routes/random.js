@@ -18,10 +18,11 @@ events.on('route:/random/:eventid/:tokenid:get', function (connection) {
 			events.emit('error:500', {connection: connection, message: 'There was a problem with eventbrite'});
 		} else {
 			filteredAttendees = attendees.filter(function (attendee) {
-				return attendee.checked_in === true;
+				return attendee.checked_in === true && (typeof attendee.doorPrized === 'undefined' || attendee.doorPrized === false);
 			});
 
 			randomAttendee = filteredAttendees[getRandomInt(0, filteredAttendees.length)];
+            randomAttendee.doorPrized = true;
 
 			connection.res.end(template(randomAttendee.profile));
 		}
