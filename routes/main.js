@@ -4,5 +4,5 @@ var events = require('monument').events
 events.on('route:/:get', function (connection) {
 	'use strict';
 
-	connection.res.end(mainTemplate());
+	connection.res.send(mainTemplate());
 });

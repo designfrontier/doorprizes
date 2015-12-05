@@ -45,10 +45,10 @@ events.on('route:/random/:eventid/:tokenid:get', function (connection) {
             if(typeof randomAttendee !== 'undefined'){
                 doorPrized.push(randomAttendee.id);
 
-    			connection.res.end(template(randomAttendee.profile));
+    			connection.res.send(template(randomAttendee.profile));
             } else {
                 doorPrized = [];
-                connection.res.end(template({name: 'No More Random Attendees. Resetting...'}));
+                connection.res.send(template({name: 'No More Random Attendees. Resetting...'}));
             }
 		}
 
